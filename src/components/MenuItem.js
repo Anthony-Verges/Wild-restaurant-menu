@@ -32,7 +32,7 @@ class MenuItem extends Component {
           onClick = {event => {
             const handleClickFavorite = !this.state.isFavorite;
             this.setState({isFavorite : handleClickFavorite})
-          }} className={this.state.isFavorite ? "isFavorite" : "noteFavorite"}
+          }} className={this.state.isFavorite ? "isFavorite" : "notFavorite"}
         ></div>
         </div>
       </div>
