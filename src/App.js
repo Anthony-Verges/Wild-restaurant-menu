@@ -37,7 +37,7 @@ const App = () => {
   return (
     <div>
       <h1>Wild Restaurant Menu</h1>
-      {/* pass the variable foodItems as props to MenuList component */}
+      <MenuList {...foodItems}/>
     </div>
   );
 };

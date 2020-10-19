@@ -2,32 +2,41 @@ import React from "react";
 import { Component } from "react";
 
 class MenuItem extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isFavorite : false
+    };
+  }
   //create a state isFavorite that has the inital value of isFavorite that comes from the props
-
   render() {
     return (
       <div className="itemContainer">
         <div className="leftContainer">
           <div className="imgContainer">
-            {/* the image will receive the url src from the props */}
-            <img src="" alt="" />
+            <img src={this.props.foodImage} alt="" />
           </div>
           <div className="itemDescription">
-            {/* the h3 will receive the item name from the props */}
-            <h3>{}</h3>
-            {/* the p will receive the item description from the props */}
-            <p>{}</p>
+            
+            <h3>{this.props.itemName}</h3>
+            
+            <p>{this.props.description}</p>
           </div>
         </div>
         <div className="rightContainer">
-          {/* the div will receive the item price from the props */}
-          <div>{} EUR</div>
+          
+          <div>{this.props.price} EUR</div>
 
           {/* the div with id favorite will have 2 attributes:
                 - onClick, will call the method handleClickFavorite,
                 - classname, that will be conditionally rendered, depending on the value of isFavorite from the component's state
             */}
-          <div id="favorite"></div>
+          <div id="favorite"
+          onClick = {event => {
+            const handleClickFavorite = !this.state.isFavorite;
+            this.setState({isFavorite : handleClickFavorite})
+          }}
+        >{this.state.isFavorite ? "isFavorite" : "noteFavorite"}</div>
         </div>
       </div>
     );
