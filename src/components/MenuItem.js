@@ -27,10 +27,7 @@ class MenuItem extends Component {
           
           <div>{this.props.price} EUR</div>
 
-          {/* the div with id favorite will have 2 attributes:
-                - onClick, will call the method handleClickFavorite,
-                - classname, that will be conditionally rendered, depending on the value of isFavorite from the component's state
-            */}
+        
           <div id="favorite"
           onClick = {event => {
             const handleClickFavorite = !this.state.isFavorite;
