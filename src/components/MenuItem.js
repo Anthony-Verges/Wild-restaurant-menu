@@ -28,12 +28,12 @@ class MenuItem extends Component {
           <div>{this.props.price} EUR</div>
 
         
-          <div id="favorite"
+          <div id="favorite" 
           onClick = {event => {
             const handleClickFavorite = !this.state.isFavorite;
             this.setState({isFavorite : handleClickFavorite})
-          }}
-        >{this.state.isFavorite ? "isFavorite" : "noteFavorite"}</div>
+          }} className={this.state.isFavorite ? "isFavorite" : "noteFavorite"}
+        ></div>
         </div>
       </div>
     );
