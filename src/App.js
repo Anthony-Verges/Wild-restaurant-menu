@@ -37,7 +37,7 @@ const App = () => {
   return (
     <div>
       <h1>Wild Restaurant Menu</h1>
-      <MenuList {...foodItems}/>
+      {<MenuList menuItems={foodItems} /> }
     </div>
   );
 };
